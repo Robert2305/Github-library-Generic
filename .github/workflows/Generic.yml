@@ -13,4 +13,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Example Step
-        run: echo "This job was triggered by Repo B!"
+        run: |
+          echo "Environment: ${{ github.event.client_payload.environment }}"
+          echo "Version: ${{ github.event.client_payload.version }}"
