@@ -12,6 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Puting error to check
+        run: |
+          sudo mkdie /home/error_log
+
       - name: Example Step
         run: |
           echo "Environment: ${{ github.event.client_payload.environment }}"
